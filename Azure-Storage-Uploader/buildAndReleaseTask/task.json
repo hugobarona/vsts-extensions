@@ -1,0 +1,41 @@
+{
+    "id": "a0c3ccda-83d8-482d-b5e3-a03eb2afa42b",
+    "name": "azure-storage-uploader",
+    "friendlyName": "Azure Storage Uploader",
+    "description": "A task to manage upload of files to an existing Azure Storage Container. Supports regular expressions, option to keep original file paths, and more.",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "visibility": [
+        "Build",
+        "Release"
+    ],
+    "author": "hmbarona",
+    "version": {
+        "Major": 0,
+        "Minor": 1,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Upload files to Azure Storage Account ",
+    "groups": [
+        {
+            "name": "advanced",
+            "displayName": "Advanced",
+            "isExpanded": false
+        }
+    ],
+    "inputs": [
+        {
+            "name": "filesExpression",
+            "type": "string",
+            "label": "File(s) Selection",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Use filename with relative path, or regular expression."
+        }
+    ],
+    "execution": {
+        "Node": {
+            "target": "index.js"
+        }
+    }
+}
